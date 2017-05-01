@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+{% load staticfiles %}
+
+<html lang="ru-RU">
+  <head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="{% static "css/base.css" %}">
+    
+    <title>{% block title %}{% endblock %}Поликлиника №3</title>
+  </head>
+
+  <body>
+    <!-- static working check img -->
+    <img src="{% static "img/dynamic_static.svg" %}">
+
+    <h1>Поликлиника №3</h1>
+    <h2>{% block body_title %}{% endblock %}</h2>
+
+    {% block body_content %}
+    {% endblock body_content %}
+
+    <script src="{% static "js/jquery-3.2.1.min.js" %}"></script>
+    <script src="{% static "js/appointments-ajax.js" %}"></script>
+  </body>
+</html>

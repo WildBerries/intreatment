@@ -1,0 +1,48 @@
+{% extends 'html/base.html' %}
+
+
+{% block title %}Записаться на прием к врачу - {% endblock %}
+
+
+{% block body_title %}Форма для записи на прием к врачу{% endblock %}
+
+
+{% block body_content %}
+
+  {% if form.errors %}
+    <p class="error-message">
+      Невозможно отправить форму. Пожалуйста выполните следующие условия:
+    </p>
+  {% endif %}
+
+  <div>
+    <form method="post">
+      {% csrf_token %}
+      <h3>Выбор врача:</h3>
+        <p>
+          {{ form.staff_member.errors }}
+          {{ form.staff_member }}
+        </p>
+      <h3>Дата приема:</h3>
+        <p>
+          {{ form.date_appointment.errors }}
+          {{ form.date_appointment }}
+        </p>
+      <h3>Время приема:</h3>
+        <p>
+          {{ form.time_appointment.errors }}
+          {{ form.time_appointment }}
+        </p>
+      <h3>Данные о пациенте:</h3>
+        <p>
+          {{ form.last_name }} {{ form.first_name }} {{ form.patronymic_name }}
+        </p>
+      <input type="submit" name="submit" value="Записаться" />
+    </form>
+  </div>
+  
+{% endblock body_content %}
+
+
+
+

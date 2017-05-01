@@ -1,0 +1,13 @@
+p.error-message {
+    color: #cc5a5a;
+}
+
+ul.errorlist {
+    list-style-type: none;
+    padding-left: 0;
+    color: #cc5a5a;
+}
+
+img {
+    height: 80px;
+}
