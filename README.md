@@ -1,16 +1,16 @@
 Intreatment project - is one page app for making a doctor appointments, also allowes to get information about all appointments through admin panel.
 
-app url:
+App url:
 
     http://{{ hostname }}/
 
-admin panel url and login: 
+Admin panel url and login: 
 
     http://{{ hostname }}/admin
     login: admin
     password: pass1234
 
-project requirments:
+Project requirments:
 
       python==3.*
       Django==1.10.7
@@ -22,12 +22,13 @@ project requirments:
       Geckodriver
       https://github.com/mozilla/geckodriver/releases
       
-      
 Untit tests:
 
     python manage.py test
     
-functional_tests.py runs project functional testing:
+functional_tests.py:
+
+    runs project functional testing.
 
     Two varibles must be redefined with relevant values:
     
